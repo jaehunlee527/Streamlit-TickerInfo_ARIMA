@@ -178,8 +178,8 @@ def predict(df, best_param, day_range):
     
     model = ARIMA(df, order=best_param)
     model_fit = model.fit(disp=0)
-    model_fit.plot_predict(start=1, end=len(df)+day_range)
-    
+    fig = model_fit.plot_predict(start=1, end=len(df)+day_range, ax=ax)
+  
     #x_range = list(range(len(df) + 50))
     #plt.xticks(x_range, x_range_day)
     #plt.locator_params(nbins=8)
