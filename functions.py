@@ -171,7 +171,7 @@ def pdq_calc(df):
     return best_param
 
 def predict(df, best_param, day_range): 
-    #fig, ax = plt.subplots()
+    fig, ax = plt.subplots()
 
     #ax = df['Close'].plot(ax=ax)
     #x_range_day = pd.date_range(df.index[0], df.index[-1] + timedelta(days=50))   
@@ -187,4 +187,4 @@ def predict(df, best_param, day_range):
     #ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
     #ax.xaxis.set_minor_formatter(mdates.DateFormatter("%Y-%m"))
 
-    st.pyplot()
+    st.pyplot(fig)
